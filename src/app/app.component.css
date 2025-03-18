@@ -28,15 +28,14 @@
     overflow-x: auto; /* Enable horizontal scrolling for many items on small screens */
     background-color: #007bff; /* Blue medical theme */
     /* background-color: #ff8c00; /* Orange medical theme (alternative) */
-    padding: 10px;
-    gap: 4px; /* Increased gap for better touch spacing */
+    padding: 8px;
     border-bottom: 1px solid #ccc; /* Subtle separator */
   }
   
   .navbar a {
     display: block; /* Make each link a block for better touch target */
     color: white;
-    padding: 9px; /* Slightly larger padding for touch */
+    padding: 8px; /* Slightly larger padding for touch */
     font-size: 1.1rem; /* Slightly larger font for readability on mobile */
     text-decoration: none;
     border-radius: 5px; /* Slightly rounded corners */
