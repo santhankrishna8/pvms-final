@@ -1,0 +1,27 @@
+
+.c h3{
+    margin-top: 35px;
+    color:cadetblue;
+    text-align: center;
+    /* font-size: 2rem; */
+}
+hr{
+    border: 2px solid black;
+}
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 20px;
+    margin-top: -25px;
+}
+th, td {
+    text-align: center;
+    padding: 5px;
+}
+th{
+    border: 1px solid black;
+}
+td{
+    font-size: 1rem;
+    border: none !important;
+}

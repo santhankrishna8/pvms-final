@@ -1,0 +1,30 @@
+<h3 class="text-center">Main committee</h3>
+    <div class="container mt-5">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let member of smembers">
+                    <td class="pos"><b>{{ member.position }}</b></td>
+                    <td class="namem">{{ member.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table">
+            <a style="font-size: 1rem;"><b>Executive Members:</b></a>
+            <tbody>
+                <tr *ngFor="let member of secMembers">
+                    <td>{{ member.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table">
+            <a style="font-size: 1rem;"><b>Advisors:</b></a>
+            <tbody>
+                <tr *ngFor="let member of advisors">
+                    <td>{{ member.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>

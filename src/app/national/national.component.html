@@ -1,0 +1,19 @@
+<h3 class="text-center">National committee</h3>
+
+    <div class="container mt-5">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let member of members">
+                    <td class="pos"><b>{{ member.position }}</b></td>
+                    <td class="namem">{{ member.name }}</td>
+                </tr>
+            </tbody>
+        </table><br>
+        <table class="table">
+            <a style="font-size: 1rem;"><b>Executive Members:</b></a>
+            <tbody>
+                <tr *ngFor="let member of ecMembers">
+                    <td>{{ member.name }}({{ member.location }})</td>
+                </tr>
+            </tbody>
+        </table>

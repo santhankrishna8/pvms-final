@@ -1,0 +1,9 @@
+*{
+    background-color: white;
+    font-family: monospace;
+    height:100vh;
+}
+h1{
+    color:chartreuse;
+    text-align: center;
+}

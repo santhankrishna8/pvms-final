@@ -1,0 +1,22 @@
+
+.reg h2{
+    color:cadetblue;
+    text-align: center;
+}
+.reg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    gap:1rem;
+}
+@media screen and (max-width:36rem) {
+    .reg .matter{
+        object-fit: contain;
+        aspect-ratio: 1.5;
+        margin-left: 1.5rem;
+        justify-content: center;
+        width:90%;
+    }
+    
+}

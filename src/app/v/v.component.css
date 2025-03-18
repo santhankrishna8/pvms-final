@@ -1,0 +1,40 @@
+*{
+    background-color: white;
+    text-decoration: none;
+    font-family: monospace;
+}
+.states{
+    text-align: center;
+    margin:20px;
+    
+}
+button{
+    background-color: cadetblue;
+    width: 30%;
+    height:60px;
+    margin-right: 10px;
+    font-size: 2rem;
+}
+
+
+@media screen and (max-width: 36rem)  {
+    *{
+        font-size: 10px;
+    }
+
+    button{
+        font-size: 1.2rem;
+        width: 20rem;
+        height:7rem;
+        display: flex;
+        color:white;
+        font-weight: bold;
+        justify-content: center;
+        flex-direction: column;
+        
+        align-items: center;
+        text-align: center;
+        margin:15px auto;
+    }
+
+}

@@ -1,0 +1,13 @@
+<div class="container">
+    <button (click)="showMain()">Main Committee</button>
+    <button (click)="showNational()">National Committee</button>
+</div>
+  <br>
+  <hr>
+    <div *ngIf="showMainContent">
+      <app-main></app-main>
+    </div>
+  
+    <div *ngIf="showNationalContent">
+      <app-national></app-national>
+    </div>

@@ -1,0 +1,26 @@
+<div class="image-overlay" *ngIf="showImages">
+  <div class="image-container">
+  <button class="close-btn" (click)="closeImages()">✖</button>
+  <div class="images-wrapper">
+  <img *ngFor="let img of images" [src]="img" alt="Banner" />
+  </div>
+  </div>
+  </div>
+  
+  <div *ngIf="!showImages">
+  <div class="banner">
+  <img src="\assets\Banner.jpg" alt="Banner">
+  </div>
+  
+  <div class="navbar">
+  <a class="button" routerLink="/home" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Home</a>
+  <a class="button" routerLink="/c" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Committee</a>
+  <a style="margin-left: -4px;" class="button" routerLink="/v" routerLinkActive="activebutton" ariaCurrentWhenActive="page">వైద్యులు</a>
+  <a  class="button" routerLink="/reg" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Registration</a>
+  </div>
+  
+
+  
+
+  <router-outlet></router-outlet>
+  </div>

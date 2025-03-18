@@ -1,0 +1,149 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  overflow-x: hidden;
+  }
+  
+  .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  }
+  
+  .banner img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  }
+  
+  h {
+  color: rgb(246, 180, 56);
+  }
+  .navbar {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling for many items on small screens */
+    background-color: #007bff; /* Blue medical theme */
+    /* background-color: #ff8c00; /* Orange medical theme (alternative) */
+    padding: 10px;
+    gap: 4px; /* Increased gap for better touch spacing */
+    border-bottom: 1px solid #ccc; /* Subtle separator */
+  }
+  
+  .navbar a {
+    display: block; /* Make each link a block for better touch target */
+    color: white;
+    padding: 9px; /* Slightly larger padding for touch */
+    font-size: 1.1rem; /* Slightly larger font for readability on mobile */
+    text-decoration: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    transition: background-color 0.3s ease; /* Smooth hover/active effect */
+  }
+  
+  .navbar a:hover,
+  .navbar a:active {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter background on hover/active */
+  }
+  
+  .activebutton {
+    background-color: rgba(255, 255, 255, 0.3); /* More prominent active state */
+    font-weight: bold;
+  }
+  
+  /* Optional: Add a fixed position at the top */
+  /* .navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* Ensure it stays on top */
+  
+  
+ 
+
+  /* Full-screen overlay */
+  .image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+  text-align: center;
+  }
+  
+  /* Image container */
+  .image-container {
+  position: relative;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  max-height: 80%;
+  overflow-y: auto;
+  }
+  
+  /* Close Button */
+  .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  }
+  
+  /* Images Wrapper */
+  .images-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  }
+  
+  /* Images */
+  .images-wrapper img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+  .image-container {
+  width: 95%;
+  max-height: 90%;
+  }
+  .images-wrapper img {
+  max-width: 90%;
+  }
+  .navbar {
+    justify-content: flex-start; /* Align items to the start on larger screens */
+  }.navbar a {
+    padding: 12px ; /* Adjust padding for larger screens */
+    font-size: 1rem;
+  }
+  
+  }
+  
+  @media screen and (max-width: 36rem) {
+  * {
+  font-size: 10px;
+  }
+  
+  
+  }
