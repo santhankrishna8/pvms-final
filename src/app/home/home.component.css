@@ -64,53 +64,67 @@ h1 {
    
 
 }
-
-/* Basic image positioning and container sizing */
+.color-changing-text {
+    font-size: .9rem; /* Adjust font size as needed */
+    font-weight: bold; /* Optional: Make the text bold */
+    animation: colorChange 5s infinite alternate; /* 5 seconds duration, infinite loop, alternate direction */
+  }
+  
+  @keyframes colorChange {
+    0% { color: red; }
+    25% { color: orange; }
+    50% { color: lightblue; }
+    75% { color: green; }
+    100% { color: blue; }
+  }
 .slider-container {
-    width: 600px; /* Match image width for one visible image */
-    margin: 0 auto;
-    overflow: hidden;
-    
-}
-
-.slider-images {
     position: relative;
-    display: flex;
-    animation: slide 50s infinite ease-in-out; /* Total animation time */
-}
-
-/* Ensure uniform image dimensions and scaling */
-.slider-images img {
-    max-width: 600px; /* Set desired width */
-    max-height: 500px; /* Set desired height */
-    object-fit: contain ; /* Fill container while preserving aspect ratio */
-}
-
-/* Animation styles for image display time and loop */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
+    width: 80%; /* Adjust to your desired width */
+    max-width: 800px; /* Optional: set a maximum width */
+    height: 300px; /* Adjust to your desired height */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* or cover, fill, etc. */
+    display: block;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Remove background */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+  
+  .slider-button.prev {
+    left: 10px;
+  }
+  
+  .slider-button.next {
+    right: 10px;
+  }
+  
+  /* Optional: Add hover effect to buttons */
+  .slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background on hover */
+  }
+  
+  /* Media query for smaller screens (adjust as needed) */
+  @media (max-width: 600px) {
+    .slider-image {
+      max-height: 60vh; /* Reduce height for smaller screens */
     }
-    20% {
-        transform: translateX(-600px); /* 20% per image (5s each) */
-    }
-    40% {
-        transform: translateX(-1200px);
-    }
-    60% {
-        transform: translateX(-1800px);
-    }
-    80% {
-        transform: translateX(-2400px);
-    }
-    100% {
-        transform: translateX(-3000px); /* Adjust distance based on image count */
-    }
-}
-
-
-
-
+  }
+  
+ 
 
 
 
