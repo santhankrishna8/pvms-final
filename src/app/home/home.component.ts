@@ -87,9 +87,9 @@ export class HomeComponent implements OnInit, OnDestroy  {
 
   videos: Video[] = [
     { title: 'ఔషధ విజ్ఞాన సదస్సు December 2019', url: 'assets/2019_7 mins.mp4', thumbnail: 'assets/2019.png' },
-    { title: "ఔషధ విజ్ఞాన సదస్సు December 2021", url: 'assets/dec_2021_10mins.mp4', thumbnail: 'assets/2021.png' },
-    { title: 'ఔషధ విజ్ఞాన సదస్సు December 2021', url: 'assets/dec_2021_25secs.mp4', thumbnail: 'assets/2021.png' },
-    { title: 'ఔషధ విజ్ఞాన సదస్సు December 2021', url: 'assets/dec_2021.mp4', thumbnail: 'assets/2021.png' },
+    { title: "ఔషధ విజ్ఞాన సదస్సు December 2021- 1", url: 'assets/dec_2021_10mins.mp4', thumbnail: 'assets/2021.png' },
+    { title: 'ఔషధ విజ్ఞాన సదస్సు December 2021- 2', url: 'assets/dec_2021_25secs.mp4', thumbnail: 'assets/2021.png' },
+    { title: 'ఔషధ విజ్ఞాన సదస్సు December 2021- 3', url: 'assets/dec_2021.mp4', thumbnail: 'assets/2021.png' },
     // Add your video data here
   ];
 
