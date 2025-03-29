@@ -22,6 +22,28 @@
         
     </div>
     <br>
+    <!-- <h1>IPL Video Highlights</h1> -->
+
+    <h1>Videos</h1>
+
+    <div class="basic-video-list-container">
+        <div *ngFor="let video of videos" class="video-item" (click)="openVideoModal(video.url)">
+          <img [src]="video.thumbnail || 'assets/images/default-video-thumb.png'" alt="{{ video.title }}" />
+          <div class="video-title">{{ video.title }}</div>
+        </div>
+        <br><br>
+      </div>
+    
+      <div class="modal" *ngIf="isModalOpen" (click)="closeVideoModal($event)">
+        <div class="modal-content">
+          <span class="close-button" (click)="closeVideoModal()"> &times; </span>
+          <video id="modalVideo" width="800" height="450" controls *ngIf="selectedVideoUrl" [src]="selectedVideoUrl"></video>
+          <div *ngIf="!selectedVideoUrl">No video selected.</div>
+        </div>
+        
+      </div>
+      
+    <br>
     <h1>Photos</h1>
     <div class="slider-container">
         <img [src]="images[currentIndex]" class="slider-image" />

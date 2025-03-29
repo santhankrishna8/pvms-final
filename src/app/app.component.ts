@@ -3,7 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { inject } from "@vercel/analytics"
 import { CComponent } from "./c/c.component";
-
+export interface Video {
+  title: string;
+  url: string;
+  thumbnail?: string;
+} 
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -28,6 +32,10 @@ export class AppComponent   {
   }
   
   title = 'pvms';
+
+
+
+  
   
 }
 

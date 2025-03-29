@@ -1,0 +1,27 @@
+.basic-video-list-container {
+    display: flex; /* Arrange items horizontally */
+    gap: 15px; /* Spacing between items */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    padding: 10px 0;
+  }
+  
+  .video-item {
+    width: 150px; /* Adjust as needed */
+    min-width: 150px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .video-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .video-title {
+    padding: 8px;
+    font-size: 0.8em;
+    text-align: center;
+  }

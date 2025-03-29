@@ -1,0 +1,6 @@
+<div class="basic-video-list-container">
+    <div *ngFor="let video of videos" class="video-item" (click)="selectVideo(video.url)">
+      <img [src]="video.thumbnail || 'assets/images/default-video-thumb.png'" alt="{{ video.title }}" />
+      <div class="video-title">{{ video.title }}</div>
+    </div>
+  </div>

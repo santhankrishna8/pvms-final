@@ -1,10 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component,OnInit, OnDestroy } from '@angular/core';
-
+import { BasicVideoListComponent } from "../basic-video-list/basic-video-list.component";
+export interface Video {
+  title: string;
+  url: string;
+  thumbnail?: string;
+}
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BasicVideoListComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -76,5 +81,41 @@ export class HomeComponent implements OnInit, OnDestroy  {
   prevImage() {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
     console.log('Current Index: ', this.currentIndex);
+  }
+
+
+
+  videos: Video[] = [
+    { title: 'ఔషధ విజ్ఞాన సదస్సు December 2019', url: 'assets/2019_7 mins.mp4', thumbnail: 'assets/2019.png' },
+    { title: "ఔషధ విజ్ఞాన సదస్సు December 2021", url: 'assets/dec_2021_10mins.mp4', thumbnail: 'assets/2021.png' },
+    { title: 'ఔషధ విజ్ఞాన సదస్సు December 2021', url: 'assets/dec_2021_25secs.mp4', thumbnail: 'assets/2021.png' },
+    { title: 'ఔషధ విజ్ఞాన సదస్సు December 2021', url: 'assets/dec_2021.mp4', thumbnail: 'assets/2021.png' },
+    // Add your video data here
+  ];
+
+  selectedVideoUrl: string | null = null;
+  selectedVideo: boolean = false;
+  isModalOpen: boolean = false;
+
+  openVideoModal(url: string) {
+    console.log('Video clicked:', url);
+    this.selectedVideoUrl = url;
+    console.log('selectedVideoUrl:', this.selectedVideoUrl);
+    this.isModalOpen = true;
+    this.selectedVideo = true;  
+    console.log('isModalOpen:', this.isModalOpen);
+  }
+
+  closeVideoModal(event?: MouseEvent) {
+    console.log('Close button clicked');
+    this.isModalOpen = false;
+    this.selectedVideoUrl = null;
+    this.selectedVideo = false;  
+    const modalVideo = document.getElementById('modalVideo') as HTMLVideoElement;
+    if (modalVideo) {
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+      modalVideo.src = '';
+    }
   }
 }
